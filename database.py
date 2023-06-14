@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 
-db_connection_engine = "mysql+pymysql://vcpz0flra94m63sw0pj7:pscale_pw_FoDx1uXfYdIhtLd5aPvMWg2YWzQkCrhzewa04ZN1WFm@aws.connect.psdb.cloud/hookupfinserve"
+db_connection_engine ="mysql+pymysql://8hftdvowswlulou064sv:pscale_pw_GoNoBnhRdxCaq5Vnr7JwNGRg89lhepOVIV5cBywihY9@aws.connect.psdb.cloud/hookup"
+
 engine = create_engine(db_connection_engine,
                        connect_args={"ssl": {
                          "ca": "/etc/ssl/cert.pem"
