@@ -1,24 +1,38 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">SEBI Notification</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">
-SEBI notification mandates adherence to regulations for selling financial products, ensuring suitability, transparency, and investor protection. Compliance is crucial for registered intermediaries to maintain regulatory standards.</button>
-      </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the pop-up message */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <h3>Regard to SEBI notification dated 2023 June</h3>
+        <p>SEBI notification mandates adherence to regulations for selling financial products, ensuring suitability, transparency, and investor protection. Compliance is crucial for registered intermediaries to maintain regulatory standards.
+</p>
+        <button type="button" class="btn btn-primary" onclick="hidePopup()">Agree</button>
     </div>
-  </div>
-</div>
+
+    <script>
+        // JavaScript function to show and hide the pop-up message
+        window.onload = function() {
+            document.getElementById("popup").style.display = "block";
+        };
+
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>

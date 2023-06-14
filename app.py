@@ -25,5 +25,13 @@ PRODUCTS = [
 
 def fin_services():
   return render_template("home.html", company_name="Hookup Finserve", products = PRODUCTS)
+
+@app.route("/products")
+def show_products():
+  return render_template("productpage.html")
+
+@app.route("/blog")
+def show_blog():
+  return render_template("blog.html")
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
