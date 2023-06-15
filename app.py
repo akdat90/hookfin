@@ -33,5 +33,10 @@ def show_products():
 @app.route("/blog")
 def show_blog():
   return render_template("blog.html")
+
+@app.route("/signup")
+def show_signup():
+  return render_template("signupform.html")
+  
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
